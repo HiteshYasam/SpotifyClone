@@ -1,14 +1,14 @@
-#<h1 style="color:blue;">Hosted at <a>https://advspotifyhitesh.freewebhostmost.com/</a></h1>
+# <h1 style="color:blue;">Hosted at <a>https://advspotifyhitesh.freewebhostmost.com/</a></h1>
 <h2>Advanced Spotify Clone</h2>
 <h2>This website is an advanced version for real spotify website with all built-in music bar and dynamic albums built using HTML, CSS, JavaScript </h2>
 
-<h3>Skills</h3>
+## Skills Used
 <li>HTML</li>
 <li>CSS</li>
 <li>Java Script</li>
 <li>Hosting</li>
 
-<h3>Features:</h3>
+## Features:
 <li>Music Bar with working sound bar, paly/pause buttons, next and previous buttons</li>
 <li>Dynamic Albums Display(Just click on any album and related songs will be displayed instantly)</li>
 <li>Real time Duration update and a functional seekbar</li>
@@ -20,6 +20,6 @@
 <li>Built for all type of devices</li>
 <li>Hosted with ssl certificate too</li>
 
-<h3>Addtional Info:</h3>
+## Addtional Info:
 <li>i have hosetd this website using freewebhost.com from free shared hosting and using .htaccess file for proving access to songs library publicly</li>
 <li>Additonal use of AI to create a few svgs</li>
