@@ -1,4 +1,4 @@
-<h1 style="color:blue;">Hosted at <a>https://advspotifyhitesh.freewebhostmost.com/</a></h1>
+#<h1 style="color:blue;">Hosted at <a>https://advspotifyhitesh.freewebhostmost.com/</a></h1>
 <h2>Advanced Spotify Clone</h2>
 <h2>This website is an advanced version for real spotify website with all built-in music bar and dynamic albums built using HTML, CSS, JavaScript </h2>
 
