@@ -1,6 +1,7 @@
 console.log("JS will load shortly")
 var currFolder;
 var currSong = new Audio();
+const SongsAddress = "/";
 let songs = [];
 
 function convertSecondsToMinutes(seconds) {
@@ -19,8 +20,8 @@ function convertSecondsToMinutes(seconds) {
 
 async function getSongs(folder){
     currFolder = folder
-    let a = await fetch(`https://raw.githubusercontent.com/HiteshYasam/SpotifyClone/main/songs/${folder}`);
-    // let a = await fetch(`http://127.0.0.1:5500/${folder}`);
+    // let a = await fetch(`https://raw.githubusercontent.com/HiteshYasam/SpotifyClone/main/songs/${folder}`);
+    let a = await fetch(`${SongsAddress}${folder}`);
     let response = await a.text();
     // console.log(response);
     let div = document.createElement("div")
@@ -70,7 +71,7 @@ const palyMusic = (track, pause = false)=>{
 } 
 
 async function displayAlbums(){
-  let a = await fetch("http://127.0.0.1:5500/songs");
+  let a = await fetch(`${SongsAddress}songs`);
   let response = await a.text();
   let div = document.createElement("div")
   div.innerHTML = response;
@@ -80,7 +81,7 @@ async function displayAlbums(){
     const e = array[index];
     if(e.href.includes("/songs") && !e.href.endsWith("/songs")){
       let folder = e.href.split('/').slice(-1)[0]
-      let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+      let a = await fetch(`${SongsAddress}songs/${folder}/info.json`);
       let response = await a.json();
       document.querySelector(".cardContainer").innerHTML += `<div data-folder=${folder} class="card">
             <div class="play">
@@ -89,7 +90,7 @@ async function displayAlbums(){
                 <polygon points="16,12 28,20 16,28" fill="#000000" stroke="#000000" stroke-width="1.5" stroke-linejoin="miter"/>
               </svg> 
             </div>
-            <img src="http://127.0.0.1:5500/songs/${folder}/cover.jpg" alt="">
+            <img src="songs/${folder}/cover.jpg" alt="">
             <h2>${response.title}</h2>
             <p>${response.description}</p>
           </div>`
@@ -107,9 +108,9 @@ async function displayAlbums(){
 async function main(){
 
     await getSongs("songs/Animal");
-    // console.log(songs[0], true);
+    console.log(songs[0], true);
     palyMusic(songs[0], true);
-    
+    // https://github.com/HiteshYasam/SpotifyClone/blob/main/songs/Animal/Ammayi.mp3
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
     // var audio = new Audio(songs[0]);
     // audio.play();
